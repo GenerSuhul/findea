@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FINDEA - Lugares</title>
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #FDF6E3;
+      color: #603800;
+    }
+    .header {
+      background-color: #B5731A;
+    }
+    .navmenu a {
+      color: #FDF6E3;
+    }
+    .navmenu a i {
+      color: #603800;
+    }
+    .navmenu a:hover, .navmenu a.active {
+      background: #D29B1E;
+      color: white;
+    }
+    .navmenu a:hover i,
+    .navmenu a.active i {
+      color: white;
+    }
+    .sitename {
+      color: #FDF6E3;
+    }
+    .section-title h2 {
+      color: #B5731A;
+    }
+  </style>
+</head>
+<body class="index-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+  <i class="header-toggle d-xl-none bi bi-list"></i>
+
+  <div class="profile-img">
+    <img src="assets/img/logo.png" alt="FINDEA Logo" class="img-fluid rounded-circle" />
+  </div>
+
+  <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+    <h1 class="sitename">FINDEA</h1>
+  </a>
+
+  <nav id="navmenu" class="navmenu">
+    <ul>
+      <li><a href="index.html"><i class="bi bi-house"></i> Inicio</a></li>
+      <li><a href="lugares.html"><i class="bi bi-geo-alt"></i> Lugares</a></li>
+      <li><a href="gastronomia.html"><i class="bi bi-cup-straw"></i> Gastronomía</a></li>
+      <li><a href="eventos.html"><i class="bi bi-calendar-event"></i> Eventos</a></li>
+      <li><a href="emprendedores.html"><i class="bi bi-person-lines-fill"></i> Emprendedores</a></li>
+      <li><a href="sugerencias.html"><i class="bi bi-chat-dots"></i> Sugerencias</a></li>
+      <li><a href="contacto.html"><i class="bi bi-envelope"></i> Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <main class="main">
+    <section class="section services light-background">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Lugares Turísticos</h2>
+          <p>Explora los sitios más emblemáticos de Petén</p>
+        </div>
+
+        <div class="row gy-4" id="contenedor-lugares" data-aos="fade-up" data-aos-delay="100">
+          <!-- JS rellena lugares aquí -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer light-background">
+    <div class="container text-center">
+      <p>© 2025 FINDEA</p>
+    </div>
+  </footer>
+
+  <div id="preloader"></div>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="js/storage.js"></script>
+</body>
+</html>

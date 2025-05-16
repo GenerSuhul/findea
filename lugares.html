@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FINDEA - Lugares</title>
-  <!-- Favicon -->
-  <link rel="icon" href="assets/img/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+  <title>FINDEA - Lugares Turísticos</title>
 
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/img/favicon.png" />
 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
@@ -28,7 +27,8 @@
     .navmenu a i {
       color: #603800;
     }
-    .navmenu a:hover, .navmenu a.active {
+    .navmenu a:hover,
+    .navmenu a.active {
       background: #D29B1E;
       color: white;
     }
@@ -39,38 +39,73 @@
     .sitename {
       color: #FDF6E3;
     }
-    .section-title h2 {
+    .bi {
+      color: #603800 !important;
+    }
+
+    .card-lugar {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .card-lugar:hover {
+      background: #fdf1d2;
+    }
+    .card-lugar img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .card-description {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+    .card-description a {
       color: #B5731A;
+      text-decoration: underline;
+    }
+    h5.titulo-lugar {
+      margin-bottom: 0;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+    }
+    h5.titulo-lugar i {
+      margin-right: 8px;
     }
   </style>
 </head>
 <body class="index-page">
 
+  <!-- Sidebar -->
   <header id="header" class="header d-flex flex-column justify-content-center">
-  <i class="header-toggle d-xl-none bi bi-list"></i>
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <div class="profile-img">
+      <img src="assets/img/logo.png" alt="FINDEA Logo" class="img-fluid rounded-circle" />
+    </div>
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">FINDEA</h1>
+    </a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house"></i> Inicio</a></li>
+        <li><a href="lugares.html" class="active"><i class="bi bi-geo-alt"></i> Lugares</a></li>
+        <li><a href="gastronomia.html"><i class="bi bi-cup-straw"></i> Gastronomía</a></li>
+        <li><a href="eventos.html"><i class="bi bi-calendar-event"></i> Eventos</a></li>
+        <li><a href="emprendedores.html"><i class="bi bi-person-lines-fill"></i> Emprendedores</a></li>
+        <li><a href="sugerencias.html"><i class="bi bi-chat-dots"></i> Sugerencias</a></li>
+        <li><a href="contacto.html"><i class="bi bi-envelope"></i> Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="profile-img">
-    <img src="assets/img/logo.png" alt="FINDEA Logo" class="img-fluid rounded-circle" />
-  </div>
-
-  <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-    <h1 class="sitename">FINDEA</h1>
-  </a>
-
-  <nav id="navmenu" class="navmenu">
-    <ul>
-      <li><a href="index.html"><i class="bi bi-house"></i> Inicio</a></li>
-      <li><a href="lugares.html"><i class="bi bi-geo-alt"></i> Lugares</a></li>
-      <li><a href="gastronomia.html"><i class="bi bi-cup-straw"></i> Gastronomía</a></li>
-      <li><a href="eventos.html"><i class="bi bi-calendar-event"></i> Eventos</a></li>
-      <li><a href="emprendedores.html"><i class="bi bi-person-lines-fill"></i> Emprendedores</a></li>
-      <li><a href="sugerencias.html"><i class="bi bi-chat-dots"></i> Sugerencias</a></li>
-      <li><a href="contacto.html"><i class="bi bi-envelope"></i> Contacto</a></li>
-    </ul>
-  </nav>
-</header>
-
-
+  <!-- Main -->
   <main class="main">
     <section class="section services light-background">
       <div class="container">
@@ -80,12 +115,81 @@
         </div>
 
         <div class="row gy-4" id="contenedor-lugares" data-aos="fade-up" data-aos-delay="100">
-          <!-- JS rellena lugares aquí -->
+
+          <!-- Lugar: Tikal -->
+          <div class="col-12 card-lugar" onclick="toggleDescripcion(this)">
+            <h5 class="titulo-lugar"><i class="bi bi-geo-alt-fill"></i>Tikal</h5>
+            <img src="assets/img/lugares/tikal.jpg" alt="Tikal">
+            <div class="card-description">
+              <p><strong>Descripción:</strong> Tikal es uno de los sitios arqueológicos más importantes de la civilización maya, ubicado en el corazón del Parque Nacional Tikal, declarado Patrimonio de la Humanidad.</p>
+              <p><strong>Servicios:</strong><br>
+                • Guías turísticos certificados<br>
+                • Senderos interpretativos<br>
+                • Centro de visitantes y museo<br>
+                • Área de camping y hoteles ecológicos
+              </p>
+              <p><strong>Actividades:</strong><br>
+                • Recorridos por templos mayas<br>
+                • Observación de fauna (monos, aves)<br>
+                • Caminatas por la selva<br>
+                • Fotografía y arqueología
+              </p>
+              <p><strong>Ubicación:</strong> <a href="https://maps.app.goo.gl/PkathD5o6EYD4jiU7" target="_blank">Ver en Google Maps</a></p>
+            </div>
+          </div>
+
+          <!-- Lugar: Yaxhá -->
+          <div class="col-12 card-lugar" onclick="toggleDescripcion(this)">
+            <h5 class="titulo-lugar"><i class="bi bi-geo-alt-fill"></i>Yaxhá</h5>
+            <img src="assets/img/lugares/yaxha.jpg" alt="Yaxhá">
+            <div class="card-description">
+              <p><strong>Descripción:</strong> Yaxhá es un sitio arqueológico maya rodeado por lagunas y selva. Se caracteriza por su tranquilidad y vistas panorámicas desde las estructuras elevadas.</p>
+              <p><strong>Servicios:</strong><br>
+                • Tours guiados<br>
+                • Senderos señalizados<br>
+                • Miradores elevados<br>
+                • Zonas para acampar
+              </p>
+              <p><strong>Actividades:</strong><br>
+                • Exploración de ruinas<br>
+                • Avistamiento de aves<br>
+                • Atardeceres desde templos<br>
+                • Paseos en lancha por la laguna
+              </p>
+              <p><strong>Ubicación:</strong> <a href="https://maps.app.goo.gl/A7YshijxsVsxijb17" target="_blank">Ver en Google Maps</a></p>
+            </div>
+          </div>
+
+          <!-- Lugar: Laguna del Tigre -->
+          <div class="col-12 card-lugar" onclick="toggleDescripcion(this)">
+            <h5 class="titulo-lugar"><i class="bi bi-geo-alt-fill"></i>Laguna del Tigre</h5>
+            <img src="assets/img/lugares/tigre.jpg" alt="Laguna del Tigre">
+            <div class="card-description">
+              <p><strong>Descripción:</strong> El Parque Nacional Laguna del Tigre es el área protegida más grande de Guatemala, ubicada en el noroeste de Petén. Es clave para especies en peligro como el jaguar, tapir y aves migratorias.</p>
+              <p><strong>Servicios:</strong><br>
+                • Puestos de control y vigilancia de CONAP<br>
+                • Guías comunitarios (en algunas zonas)<br>
+                • Centros de investigación y monitoreo<br>
+                • Campamentos básicos<br>
+                • Transporte fluvial en algunas rutas
+              </p>
+              <p><strong>Actividades:</strong><br>
+                • Observación de aves<br>
+                • Avistamiento de fauna<br>
+                • Recorridos en lancha<br>
+                • Caminatas ecológicas<br>
+                • Fotografía y monitoreo ambiental
+              </p>
+              <p><strong>Ubicación:</strong> <a href="https://maps.app.goo.gl/5r4KJXtNKgnprE2W7" target="_blank">Ver en Google Maps</a></p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer light-background">
     <div class="container text-center">
       <p>© 2025 FINDEA</p>
@@ -100,6 +204,18 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="js/storage.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleDescripcion(card) {
+      const desc = card.querySelector(".card-description");
+      desc.style.display = (desc.style.display === "block") ? "none" : "block";
+    }
+
+    window.addEventListener("load", () => {
+      document.getElementById("preloader")?.remove();
+    });
+  </script>
+
 </body>
 </html>

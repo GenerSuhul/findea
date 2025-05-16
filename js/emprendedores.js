@@ -4,16 +4,18 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!localStorage.getItem(key)) {
     const datos = [
       {
-        nombre: "José Hernández - Guía Turístico",
-        descripcion: "Guía certificado con más de 10 años de experiencia en Tikal, Yaxhá y Uaxactún.",
-        imagen: "assets/img/emprendedores/guia_jose.jpg",
-        contacto: "WhatsApp: +502 5555 1234"
-      },
-      {
         nombre: "Hotel Lago Azul",
         descripcion: "Alojamiento familiar frente al Lago Petén Itzá, ideal para turistas que buscan tranquilidad.",
         imagen: "assets/img/emprendedores/hotel_lago.jpg",
         contacto: "Tel: +502 7790 1122"
+      },
+      {
+      nombre: "Café Ixcanul",
+      categoria: "Gastronomía",
+      descripcion: "Cafetería con enfoque en café local, panadería artesanal y cultura maya.",
+      imagen: "assets/img/emprendedores/cafe_ixcanul.jpg",
+      contacto: "Tel: +502 7830 2244",
+      ubicacion: "Isla de Flores"
       },
       {
         nombre: "Artesanías Maya Petenera",
